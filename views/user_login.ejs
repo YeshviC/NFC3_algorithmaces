@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO Login</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FFEBE5; /* Light warm color for background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .login-form {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            text-align: center;
+            color: #FF6114; /* Bright orange-red for heading */
+            margin-bottom: 30px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            color: #2C3E50; /* Darker color for label text */
+            font-weight: 400;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #d1d1d1;
+            font-size: 14px;
+            box-sizing: border-box;
+            color: #4C4B4B; /* Dark gray text */
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 14px;
+            background-color: #F39C12; /* Warm orange for the button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #FF6114; /* Change to bright orange-red on hover */
+        }
+
+        .register-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #4C4B4B; /* Dark gray color for the link */
+            text-decoration: none;
+            font-weight: 400;
+        }
+
+        .register-link:hover {
+            color: #FF6114; /* Highlight color for the link */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-form">
+        <h2>Login</h2>
+        <form action="/login" method="POST">
+            <div class="form-group">
+                <label for="username-email">Username or Email</label>
+                <input type="text" id="username-email" name="field1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <input type="submit" value="Login">
+        </form>
+
+        <!-- Registration link -->
+        <a href="/user_register" class="register-link">Don't have an account? Register here</a>
+    </div>
+</body>
+
+</html>

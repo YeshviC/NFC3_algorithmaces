@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Data Management</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            background-color: #003366;
+            color: #ffffff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex-wrap: wrap; /* Allow wrapping */
+            overflow: hidden;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .navbar div {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 30px;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #f0f0f0;
+        }
+
+        /* Main Container */
+        .container {
+            margin-top: 70px; /* Adjusted for Navbar height */
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 32px;
+            color: #333333;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .page-link {
+            display: inline-block;
+            margin: 10px;
+            font-size: 18px;
+            color: #003366;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 1px solid #003366;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .page-link:hover {
+            background-color: #003366;
+            color: #ffffff;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px;
+            }
+
+            .navbar div {
+                margin-top: 10px;
+                width: 100%;
+                justify-content: space-between;
+                flex-direction: row;
+                flex-wrap: wrap;
+                text-align: center;
+            }
+
+            .navbar a {
+                margin: 5px 0;
+                flex: 1;
+                text-align: center;
+            }
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            font-size: 24px;
+            color: #007bff;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        form input, form textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        form button {
+            padding: 12px 20px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        .block {
+            padding: 20px;
+            margin-bottom: 15px;
+            background-color: #ffffff;
+            border-radius: 6px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            border: 1px solid #ddd;
+        }
+
+        .block button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 6px 12px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        .block button:hover {
+            background-color: #0056b3;
+        }
+
+        .block h3 {
+            margin-top: 0;
+            font-size: 22px;
+            color: #333;
+        }
+
+        .block p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .block p strong {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1 style="color:#f1f1f1; margin-left:1%">Admin's Dashboard</h1>
+        <div>
+            <a href="/volunteer">Volunteers</a>
+            <a href="/admininventory">Inventory</a>
+            <a href="/section">Projects</a>
+            <a href="/donations">Donations</a>
+        </div>
+    </div>
+    <div class="container">
+        
+
+        <!-- Projects Section -->
+        <div class="section">
+            <h2>Projects</h2>
+            <!-- Add Project Form -->
+            <form action="/projects/add" method="POST">
+                <input type="text" name="project_name" placeholder="Project Name" required>
+                <textarea type="text" name="project_description" placeholder="Description" rows="4" required></textarea>
+                <input type="text" name="volunteers" placeholder="Volunteers Needed" required>
+                <button type="submit">Add Project</button>
+            </form>
+
+            <!-- Projects Blocks -->
+            <% project1.forEach(function(project) { %>
+                <div class="block">
+                    <button>Edit</button>
+                    <button>Delete</button>
+                    <h3><%= project.project_name %></h3>
+                    <p><strong>Description:</strong> <%= project.project_description %></p>
+                    <p><strong>Volunteers Needed:</strong> <%= project.volunteers %></p>
+                </div>
+            <% }); %>
+        </div>
+
+        <!-- Events Section -->
+        <div class="section">
+            <h2>Events</h2>
+            <!-- Add Event Form -->
+            <form action="/events/add" method="POST">
+                <input type="text" name="event_name" placeholder="Event Name" required>
+                <textarea name="event_description" placeholder="Description" rows="4" required></textarea>
+                <input type="date" name="date" placeholder="Date" required>
+                <input type="text" name="venue" placeholder="Venue" required>
+                <input type="text" name="volunteers" placeholder="Volunteers Needed" required>
+                <button type="submit">Add Event</button>
+            </form>
+
+            <!-- Events Blocks -->
+            <% event1.forEach(function(event) { %>
+                <div class="block">
+                    <button>Edit</button>
+                    <button>Delete</button>
+                    <h3><%= event.event_name %></h3>
+                    <p><strong>Description:</strong> <%= event.event_description %></p>
+                    <p><strong>Date:</strong> <%= event.date %></p>
+                    <p><strong>Venue:</strong> <%= event.venue %></p>
+                    <p><strong>Volunteers Needed:</strong> <%= event.volunteers%></p>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+</body>
+</html>
