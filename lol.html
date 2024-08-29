@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .dashboard {
+            width: 80%;
+            max-width: 1200px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+        }
+
+        .dashboard h1 {
+            font-size: 36px;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        .dashboard .sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .dashboard .section {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .dashboard .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .dashboard .section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .dashboard .section p {
+            font-size: 16px;
+            color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Hello, <%= user %></h1>
+        <div class="sections">
+            <div class="section">
+                <h2>Donations</h2>
+                <p><a href="/admindonations" style="text-decoration: none; color:#e0e0e0;">Manage and view all donations.</a></p>
+            </div>
+            <div class="section">
+                <h2>Volunteers</h2>
+                <p><a href="/volunteer" style="text-decoration: none; color:#e0e0e0;">Manage volunteer registrations and activities.</a></p>
+            </div>
+            <div class="section">
+                <h2>Inventory</h2>
+                <p><a href="/admininventory" style="text-decoration: none; color:#e0e0e0;">Track and manage inventory items.</a></p>
+            </div>
+            <div class="section">
+                <h2>Projects</h2>
+                <p><a href="/section" style="text-decoration: none; color:#e0e0e0;">Oversee and update project statuses.</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

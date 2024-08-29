@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="volunteer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Volunteer Page</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">NGO Dashboard</div>
+        <div class="burger-menu" id="burger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="Events.html">Projects/Events</a></li>
+                <li><a href="#donate">Donate</a></li>
+                <li><a href="home.html">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="Events.html">Projects/Events</a>
+        <a href="#donate">Donate</a>
+        <a href="home.html">Logout</a>
+    </div>
+
+<!--<div id="welcome-msg"></div>-->
+<div class="volunteer-form">
+    <p id="opp">Grab The Opportunity</p>
+    <p class="label-name">Name of the project</p>
+    <input type="text" placeholder="Name of the Project">
+    <p class="label-name">Why do you want to volunteer ?</p>
+    <textarea placeholder="Reason"></textarea>
+    <p class="label-name">Where did you hear about us? </p>
+    <input type="text" placeholder="References">
+    <p class="label-name">How much time will you be able to dedicate ? </p>
+    <input type="text" placeholder="">
+    <input class="submit-button"type="button" value="Submit">
+</div>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="contact-info">
+            <h3>Contact Us</h3>
+            <p>Email: info@example.com</p>
+            <p>Phone: +1234567890</p>
+        </div>
+        <div class="quick-links">
+            <h3>Quick Links</h3>
+            <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="volunteer.html">Volunteer</a>
+            <a href="Events.html">Projects/Events</a>
+            <a href="#donate">Donate</a>
+            <a href="volunteerdash.html">Login</a>
+        </div>
+        <div class="social-media">
+            <h3>Follow Us</h3>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+</footer>
+  
+<script>
+    document.getElementById('burger-menu').addEventListener('click', function() {
+        var sidebar = document.getElementById('sidebar');
+        sidebar.classList.toggle('open-sidebar');
+    });
+
+    // Close the sidebar when a link is clicked
+    document.querySelectorAll('.sidebar a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            document.getElementById('sidebar').classList.remove('open-sidebar');
+        });
+    });
+</script>
+</body>
+</html>

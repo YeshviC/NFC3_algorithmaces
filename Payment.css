@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background-color: #fdf6e3; 
+    padding-bottom: 100px; 
+}
+
+.navbar {
+    background-color: #f39c12; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.navbar .nav-links {
+    display: flex;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #e67e22; 
+}
+
+.navbar .burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.navbar .burger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.sidebar {
+    height: auto; 
+    width: 200px; 
+    position: absolute;
+    top: 60px; 
+    right: 0;
+    background-color: #f39c12; 
+    overflow-x: hidden;
+    transition: 0.3s;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    display: none; 
+    flex-direction: column;
+}
+
+.sidebar a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: #e67e22; 
+}
+
+.sidebar.open-sidebar {
+    display: flex; 
+}
+
+
+.payment-container {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    background-color: #fdf6e3;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 5px auto;
+}
+
+.payment-card {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fdf6e3;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.payment-card h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #e67e22; 
+}
+
+.payment-card input[type="text"],
+.payment-card input[type="number"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.payment-card input[type="file"] {
+    margin-top: 10px;
+}
+
+.payment-card p {
+    margin: 5px 0;
+    color: #e67e22; 
+}
+
+
+/* Footer Styles */
+.footer {
+    background: linear-gradient(135deg, #ff6f00, #ff5722, #ffb6c1); /* Pinkish gradient */
+    color: #fff;
+    padding: 20px 10px; 
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    background-size: cover;
+    backdrop-filter: blur(8px);
+}
+
+.footer .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Reduced gap between sections */
+}
+
+.footer .contact-info, .footer .quick-links, .footer .social-media {
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.footer .contact-info h3, .footer .quick-links h3, .footer .social-media h3 {
+    margin: 0; /* Removed margin to reduce space */
+    font-size: 1.2rem; /* Reduced font size */
+}
+
+.footer .contact-info p, .footer .quick-links a, .footer .social-media a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin: 2px 0; 
+    font-size: 0.9rem; 
+}
+
+.footer .quick-links a:hover, .footer .social-media a:hover {
+    text-decoration: underline;
+}
+
+.footer .social-media a {
+    margin: 0 8px; 
+    display: inline-block;
+    font-size: 18px; 
+}
+
+.footer .social-media a:hover {
+    color: #e67e22;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar .burger-menu {
+        display: flex;
+    }
+
+    .navbar .nav-links {
+        display: none;
+    }
+}

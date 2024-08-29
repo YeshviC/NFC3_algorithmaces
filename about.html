@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background-color: #fdf6e3; /* Light, sunny background color */
+}
+
+.navbar {
+    background-color: #f39c12; /* Bright, sunny yellow */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.navbar .nav-links {
+    display: flex;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #e67e22; /* Slightly darker orange */
+}
+
+.navbar .burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.navbar .burger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 60px; /* Below the navbar */
+    right: -250px;
+    background-color: #f39c12; /* Match navbar color */
+    overflow-x: hidden;
+    transition: 0.3s;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.sidebar a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: #e67e22; /* Slightly darker orange */
+}
+
+.open-sidebar {
+    right: 0;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('NGO.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+    filter: blur(3px);
+    opacity: 1;
+}
+
+.about-container {
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.intro-section {
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+   
+}
+.intro-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #e67e22;
+}
+
+.intro-section p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    color:rgb(75, 72, 72);
+
+}
+
+.learn-more-btn {
+    padding: 12px 24px;
+    background-color: #f39c12;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #ffffff;
+    color: rgb(75, 72, 72);
+}
+#mission{
+    color: rgb(75, 72, 72);
+    font-weight: 500;
+}
+
+.mission-section {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.mission-section h2 {
+    font-size: 28px;
+    color: #e67e22;
+    margin-bottom: 20px;
+}
+
+.mission-section p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #f39c12;
+}
+
+.mission-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    font-size: 22px;
+    color: #e67e22;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 16px;
+    color: rgb(75, 72, 72);
+}
+
+.team-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.team-section h2 {
+    font-size: 28px;
+    color: #e67e22;
+    margin-bottom: 20px;
+}
+
+.team-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.team-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.team-card img {
+    border-radius: 50%;
+    margin-bottom: 15px;
+    width: 100px;
+    height: 100px;
+}
+
+.team-card h3 {
+    font-size: 20px;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+.team-card p {
+    font-size: 16px;
+    color: rgb(75, 72, 72);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .intro-section h1 {
+        font-size: 28px;
+    }
+
+    .intro-section p {
+        font-size: 16px;
+    }
+}
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+    }
+
+    .navbar .burger-menu {
+        display: flex;
+    }
+}
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.footer {
+    background: linear-gradient(135deg, #ff6f00, #ff5722, #ffb6c1); /* Pinkish gradient */
+    color: #fff;
+    padding: 20px 10px; /* Reduced padding */
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    background-size: cover;
+    backdrop-filter: blur(8px);
+}
+
+.footer .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Reduced gap between sections */
+}
+
+.footer .contact-info, .footer .quick-links, .footer .social-media {
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.footer .contact-info h3, .footer .quick-links h3, .footer .social-media h3 {
+    margin: 0; /* Removed margin to reduce space */
+    font-size: 1.2rem; /* Reduced font size */
+}
+
+.footer .contact-info p, .footer .quick-links a, .footer .social-media a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin: 2px 0; /* Reduced margin */
+    font-size: 0.9rem; /* Reduced font size */
+}
+
+.footer .quick-links a:hover, .footer .social-media a:hover {
+    text-decoration: underline;
+}
+
+.footer .social-media a {
+    margin: 0 8px; /* Reduced margin */
+    display: inline-block;
+    font-size: 18px; /* Reduced font size */
+}
+
+.footer .social-media a:hover {
+    color: #e67e22; /* Hover effect color */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar .burger-menu {
+        display: flex;
+    }
+
+    .navbar .nav-links {
+        display: none;
+    }
+}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">NGO Dashboard</div>
+        <div class="burger-menu" id="burger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="Events.html">Projects/Events</a></li>
+                <li><a href="#donate">Donate</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="home.html">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="Events.html">Projects/Events</a>
+        <a href="#donate">Donate</a>
+        <a href="#login">Login</a>
+        <a href="home.html">Logout</a>
+    </div>
+   
+    <div class="about-container">
+        <section class="intro-section">
+            <h1>About Our NGO Management Platform</h1>
+            <p>We are committed to empowering NGOs with the tools they need to focus on their mission and make a greater impact.</p>
+            <button class="learn-more-btn">Learn More</button>
+        </section>
+
+        <section class="mission-section">
+            <h2>Our Mission</h2>
+            <p id="mission">Our mission is to empower Non-Governmental Organizations by providing them with the tools they need to manage their operations effectively. 
+                We aim to enhance the capacity of NGOs to deliver on their promises, 
+                enabling them to create meaningful change in the communities they serve. 
+                Through innovation, collaboration, and dedication, we strive to build a platform 
+                that supports the vital work of NGOs around the world, helping them to achieve their goals and amplify their impact.
+            </p>
+            <div class="mission-cards">
+                <div class="card">
+                    <h3>Efficiency</h3>
+                    <p>Our platform is designed to optimize the operations of NGOs by streamlining processes and automating routine tasks. 
+                        With integrated tools for project management, resource allocation, and volunteer coordination, 
+                        we ensure that your organization can focus more on its core mission rather than administrative overheads.
+                        By reducing manual workload and improving task management, we help NGOs operate more efficiently, 
+                        allowing them to make a greater impact with fewer resources.</p>
+                </div>
+                <div class="card">
+                    <h3>Transparency</h3>
+                    <p>Transparency is at the heart of everything we do. 
+                        Our platform provides comprehensive reporting tools that allow NGOs to track donations, 
+                        monitor project progress, and communicate openly with donors and stakeholders. 
+                        By offering real-time insights and detailed analytics, we empower organizations to maintain 
+                        accountability and build trust with their communities. 
+                        Every action taken on our platform is logged and reported, ensuring a clear and open record of all activities.</p>
+                </div>
+                <div class="card">
+                    <h3>Impact</h3>
+                    <p>The true measure of our success lies in the impact we help NGOs create in their communities. 
+                        Our platform provides tools to track and report on the outcomes of projects, 
+                        enabling organizations to demonstrate their effectiveness and the tangible changes they bring about. 
+                        By offering detailed analytics and real-time data, we help NGOs showcase their achievements 
+                        and communicate the positive effects of their work to donors, stakeholders, and the wider public. 
+                        Together, we're making a difference, one project at a time.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <h2>Meet the Team</h2>
+            <div class="team-cards">
+                <div class="team-card">
+                    <img src="team-member1.jpg" alt="Team Member 1">
+                    <h3>Sanam Bhatia</h3>
+                    <p>Volunteer</p>
+                </div>
+                <div class="team-card">
+                    <img src="team-member2.jpg" alt="Team Member 2">
+                    <h3>Roohin Kukreja</h3>
+                    <p>Volunteer</p>
+                </div>
+                <div class="team-card">
+                    <img src="team-member3.jpg" alt="Team Member 3">
+                    <h3>Yeshvi Chandiramani</h3>
+                    <p>Volunteer</p>
+                </div>
+                <div class="team-card">
+                    <img src="team-member3.jpg" alt="Team Member 3">
+                    <h3>Isha Madlani</h3>
+                    <p>Volunteer</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: info@example.com</p>
+                <p>Phone: +1234567890</p>
+            </div>
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#volunteer">Volunteer</a>
+                <a href="#projects">Projects/Events</a>
+                <a href="#donate">Donate</a>
+                <a href="#login">Login</a>
+            </div>
+            <div class="social-media">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Toggle sidebar
+        const burgerMenu = document.getElementById('burger-menu');
+        const sidebar = document.getElementById('sidebar');
+
+        burgerMenu.addEventListener('click', () => {
+            sidebar.classList.toggle('open-sidebar');
+        });
+
+        // Close sidebar when clicking outside of it
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !burgerMenu.contains(e.target)) {
+                sidebar.classList.remove('open-sidebar');
+            }
+        });
+    </script>
+
+</body>
+</html>
